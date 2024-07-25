@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--============================================ WebSite Name =================================-->
+  <title>Treats</title>
+  <!--============================================ WebSite Name =================================-->
+
+  <!--============================================ CSS Link =====================================-->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!--============================================ CSS Link =====================================-->
+
+  <!--============================================ WebSite Logo =================================-->
+  <link rel="shortcut icon" type="image/x-icon" href="../image/logoFoto.webp" />
+  <!--============================================ WebSite Logo =================================-->
+
+  <!--============================================ RemixIcon CDN ================================-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet" />
+  <!--============================================ RemixIcon CDN ================================-->
+
+  <!--============================================ AOS Animation CDN ============================-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!--============================================ AOS Animation CDN ============================-->
+
+  <!--============================================ İ18n CDN =====================================-->
+  <link href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/i18next/dist/umd/i18next.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+  <!--============================================ İ18n CDN =====================================-->
+
+  <!--============================================ Fontawesome CDN ==============================-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--============================================ Fontawesome CDN ==============================-->
+</head>
+
+<body>
+  <!--============================================ Loading =================================-->
+  <div id="welcoming" class="welcoming">
+    <h1 id="first_text">Welcome to my <span>Cakes</span></h1>
+    <h1 id="second_text">Designed by <span>Asgarov Elvin</span></h1>
+  </div>
+
+  <div class="loader">
+    <div class="intern"></div>
+    <div class="external-shadow">
+      <div class="central"></div>
+    </div>
+  </div>
+  <!--============================================ Loading =================================-->
+
+  <header>
+    <!--============================================ Notification animation =================================-->
+    <div class="toast-container"></div>
+    <!--============================================ Notification animation =================================-->
+
+    <!--============================================ Scrol Funtions =========================================-->
+    <div class="generally_scrol" id="goToTopButton" onclick="goToTop()">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+    <!--============================================ Scrol Funtions =========================================-->
+
+    <!--============================================ Snow Funtions ==========================================-->
+    <div id="snow"></div>
+    <!--============================================ Snow Funtions ==========================================-->
+
+    <!--============================================ Header Sections ========================================-->
+    <nav>
+      <div class="header_container">
+        <img class="logo" src="../image/logoFoto.webp" alt="logo" />
+        <div class="header_title">
+          <a href="../html/index.html" data-i18n="headerHome">Home</a>
+          <a href="../html/about.html" data-i18n="headerAbout">About</a>
+          <a href="../html/vacancies.html" data-i18n="headerVacancies">Vacancies</a>
+          <a href="../html/contact.html" data-i18n="headerContact">Contact</a>
+          <a href="../html/basket.html"><i class="ri-shopping-cart-2-fill"></i><sup
+              style="color: white; font-weight: 900" id="sup">0</sup></a>
+          <a href="" class="change" data-i18n="headerChange">Change Languge</a>
+          <div class="darkmood">
+            <i class="ri-moon-line"></i>
+            <i class="ri-sun-line"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--============================================ Header Sections ========================================-->
+  </header>
+  <main>
+    <!--============================================ Sections ===============================================-->
+    <div class="zero_container">
+      <img src="../image/Foto7.jpg" alt="" />
+      <div class="section_container">
+        <h2 data-i18n="sections">Sections</h2>
+        <a href="/html/favorite.html" data-i18n="Favorite" id="favSup">Favorite</a>
+        <a href="#birthdayCake" data-i18n="Birthday">Birthday Cakes</a>
+        <a href="#fruitCake" data-i18n="Fruit">Fruit Cakes</a>
+        <a href="#chocolateCake" data-i18n="Chocolate">Chocolate</a>
+        <a href="#cristmasCake" data-i18n="Chrismas">Chrismas Cakes</a>
+      </div>
+    </div>
+    <!--============================================ Sections ===============================================-->
+
+    <!--============================================ Main Sections ==========================================-->
+    <div class="sweet_container">
+      <hr />
+      <h2 data-i18n="Sweet">Let's eat sweet, let's talk sweet</h2>
+      <hr />
+    </div>
+    <div class="sweet_main" id="sweet_main">
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="1"></i>
+        <img src="../image/Foto3.jpg" alt="zero" />
+        <p data-i18n="Pasta1">Chocolate cake</p>
+        <p>15 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating1" id="star5_1" type="radio">
+          <label for="star5_1"></label>
+          <input value="4" name="rating1" id="star4_1" type="radio">
+          <label for="star4_1"></label>
+          <input value="3" name="rating1" id="star3_1" type="radio">
+          <label for="star3_1"></label>
+          <input value="2" name="rating1" id="star2_1" type="radio">
+          <label for="star2_1"></label>
+          <input value="1" name="rating1" id="star1_1" type="radio">
+          <label for="star1_1"></label>
+        </div>
+        <button data-id="1" data-i18n="buttons">Add basket</button>
+        <div class="modal_box">
+          <a href="" class="ri-loop-left-line">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p>Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p>See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p>Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Məhsul 2 -->
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="2"></i>
+        <img src="../image/Foto2.jpg" alt="foto" />
+        <p data-i18n="Pasta2">Fruit cake</p>
+        <p>18 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating2" id="star5_2" type="radio">
+          <label for="star5_2"></label>
+          <input value="4" name="rating2" id="star4_2" type="radio">
+          <label for="star4_2"></label>
+          <input value="3" name="rating2" id="star3_2" type="radio">
+          <label for="star3_2"></label>
+          <input value="2" name="rating2" id="star2_2" type="radio">
+          <label for="star2_2"></label>
+          <input value="1" name="rating2" id="star1_2" type="radio">
+          <label for="star1_2"></label>
+        </div>
+        <button data-id="2" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">
+                hdhhd
+            </div> -->
+      </div>
+
+      <!-- Məhsul 3 -->
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="3"></i>
+        <img src="../image/Foto1.jpg" alt="foto" />
+        <p data-i18n="Pasta3">Strawberry cake</p>
+        <p>20 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating3" id="star5_3" type="radio">
+          <label for="star5_3"></label>
+          <input value="4" name="rating3" id="star4_3" type="radio">
+          <label for="star4_3"></label>
+          <input value="3" name="rating3" id="star3_3" type="radio">
+          <label for="star3_3"></label>
+          <input value="2" name="rating3" id="star2_3" type="radio">
+          <label for="star2_3"></label>
+          <input value="1" name="rating3" id="star1_3" type="radio">
+          <label for="star1_3"></label>
+        </div>
+        <button data-id="3" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">
+                hdhhd
+            </div> -->
+      </div>
+
+      <!-- Məhsul 4 -->
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="4"></i>
+        <img src="../image/Winter.jpg" alt="foto" />
+        <p data-i18n="Pasta4">Winter cake</p>
+        <p>16 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating4" id="star5_4" type="radio">
+          <label for="star5_4"></label>
+          <input value="4" name="rating4" id="star4_4" type="radio">
+          <label for="star4_4"></label>
+          <input value="3" name="rating4" id="star3_4" type="radio">
+          <label for="star3_4"></label>
+          <input value="2" name="rating4" id="star2_4" type="radio">
+          <label for="star2_4"></label>
+          <input value="1" name="rating4" id="star1_4" type="radio">
+          <label for="star1_4"></label>
+        </div>
+        <button data-id="4" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">
+                hdhhd
+            </div> -->
+      </div>
+    </div>
+
+    <div class="guest_container">
+      <div class="guest_container_out">
+        <h2 data-i18n="Our" style="color: lightblue; font-weight: 900">
+          Be Our Guest
+        </h2>
+        <p data-i18n="OurText" style="color: white; font-weight: 800">
+          The Cake Shop is glad to play host to your sweet tooth in our
+          charming storefront. Grab a bite, take a seat, and enjoy all we have
+          to offer. From our delectable baked goods to our wide array of
+          gourmet-inspired gifts, we pride ourselves in satisfying your hunger
+          for all things baked.
+        </p>
+        <a href="#birthdayCake"><button data-i18n="View" class="btn">View All</button></a>
+      </div>
+      <div class="guest_container_img">
+        <img src="../image/Shop.png" alt="foto" />
+      </div>
+    </div>
+
+    <h2 class="guest_container_title" data-i18n="MoreThan">
+      More than just cakes
+    </h2>
+
+    <div class="cake__header">
+      <h2 data-i18n="BirthdayHeader" id="birthdayCake">Birthday Cake</h2>
+    </div>
+
+    <div class="sweet_main" id="sweetMain">
+      <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="5"></i>
+        <img src="../image/Birthday.jpg" alt="foto" />
+        <p data-i18n="Pasta5">Birthday cake(1)</p>
+        <p>15 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating5" id="star25" type="radio">
+          <label for="star25"></label>
+          <input value="4" name="rating5" id="star24" type="radio">
+          <label for="star24"></label>
+          <input value="3" name="rating5" id="star23" type="radio">
+          <label for="star23"></label>
+          <input value="2" name="rating5" id="star22" type="radio">
+          <label for="star22"></label>
+          <input value="1" name="rating5" id="star21" type="radio">
+          <label for="star21"></label>
+        </div>
+        <button data-id="5" data-i18n="buttons" class="btn">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="6"></i>
+        <img src="../image/Birthday2.jpg" alt="foto" />
+        <p data-i18n="Pasta6">Birthday cake(2)</p>
+        <p>15 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating6" id="star35" type="radio">
+          <label for="star35"></label>
+          <input value="4" name="rating6" id="star34" type="radio">
+          <label for="star34"></label>
+          <input value="3" name="rating6" id="star33" type="radio">
+          <label for="star33"></label>
+          <input value="2" name="rating6" id="star32" type="radio">
+          <label for="star32"></label>
+          <input value="1" name="rating6" id="star31" type="radio">
+          <label for="star31"></label>
+        </div>
+        <button data-id="6" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="7"></i>
+        <img src="../image/Birthday3.jpg" alt="foto" />
+        <p data-i18n="Pasta7">Birthday cake(3)</p>
+        <p>15 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating7" id="star45" type="radio">
+          <label for="star45"></label>
+          <input value="4" name="rating7" id="star44" type="radio">
+          <label for="star44"></label>
+          <input value="3" name="rating7" id="star43" type="radio">
+          <label for="star43"></label>
+          <input value="2" name="rating7" id="star42" type="radio">
+          <label for="star42"></label>
+          <input value="1" name="rating7" id="star41" type="radio">
+          <label for="star41"></label>
+        </div>
+        <button data-id="7" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+    </div>
+
+    <div class="cake__header">
+      <h2 data-i18n="FruitHeader" id="fruitCake">Fruit Cake</h2>
+    </div>
+    <div class="sweet_main" id="sweetMain">
+      <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="8"></i>
+        <img src="../image/Fruit.jpg" alt="foto" />
+        <p data-i18n="Pasta8">Fruit Cake(1)</p>
+        <p>20 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating8" id="star81" type="radio">
+          <label for="star81"></label>
+          <input value="4" name="rating8" id="star82" type="radio">
+          <label for="star82"></label>
+          <input value="3" name="rating8" id="star83" type="radio">
+          <label for="star83"></label>
+          <input value="2" name="rating8" id="star84" type="radio">
+          <label for="star84"></label>
+          <input value="1" name="rating8" id="star85" type="radio">
+          <label for="star85"></label>
+        </div>
+        <button data-id="8" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="9"></i>
+        <img src="../image/çilek.jpg" alt="foto" />
+        <p data-i18n="Pasta9">Fruit Cake(2)</p>
+        <p>20 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating9" id="star91" type="radio">
+          <label for="star91"></label>
+          <input value="4" name="rating9" id="star92" type="radio">
+          <label for="star92"></label>
+          <input value="3" name="rating9" id="star93" type="radio">
+          <label for="star93"></label>
+          <input value="2" name="rating9" id="star94" type="radio">
+          <label for="star94"></label>
+          <input value="1" name="rating9" id="star95" type="radio">
+          <label for="star95"></label>
+        </div>
+        <button data-id="9" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="10"></i>
+        <img src="../image/Fruit3.jpg" alt="foto" />
+        <p data-i18n="Pasta10">Fruit Cake(3)</p>
+        <p>20 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating10" id="star101" type="radio">
+          <label for="star101"></label>
+          <input value="4" name="rating10" id="star102" type="radio">
+          <label for="star102"></label>
+          <input value="3" name="rating10" id="star103" type="radio">
+          <label for="star103"></label>
+          <input value="2" name="rating10" id="star104" type="radio">
+          <label for="star104"></label>
+          <input value="1" name="rating10" id="star105" type="radio">
+          <label for="star105"></label>
+        </div>
+        <button data-id="10" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+    </div>
+
+    <div class="cake__header">
+      <h2 data-i18n="ChocolateHeader" id="chocolateCake">Chocolate Cake</h2>
+    </div>
+    <div class="sweet_main" id="sweetMain">
+      <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="11"></i>
+        <img src="../image/Chocolate.jpg" alt="foto" />
+        <p data-i18n="Pasta11">Chocolate cake(1)</p>
+        <p>16 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating11" id="star11_5" type="radio">
+          <label for="star11_5"></label>
+          <input value="4" name="rating11" id="star11_4" type="radio">
+          <label for="star11_4"></label>
+          <input value="3" name="rating11" id="star11_3" type="radio">
+          <label for="star11_3"></label>
+          <input value="2" name="rating11" id="star11_2" type="radio">
+          <label for="star11_2"></label>
+          <input value="1" name="rating11" id="star11_1" type="radio">
+          <label for="star11_1"></label>
+        </div>
+        <button data-id="11" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="12"></i>
+        <img src="../image/Chocolate2.jpg" alt="foto" />
+        <p data-i18n="Pasta12">Chocolate cake(2)</p>
+        <p>16 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating12" id="star12_5" type="radio">
+          <label for="star12_5"></label>
+          <input value="4" name="rating12" id="star12_4" type="radio">
+          <label for="star12_4"></label>
+          <input value="3" name="rating12" id="star12_3" type="radio">
+          <label for="star12_3"></label>
+          <input value="2" name="rating12" id="star12_2" type="radio">
+          <label for="star12_2"></label>
+          <input value="1" name="rating12" id="star12_1" type="radio">
+          <label for="star12_1"></label>
+        </div>
+        <button data-id="12" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="13"></i>
+        <img src="../image/Chocolate3.jpg" alt="foto" />
+        <p data-i18n="Pasta13">Chocolate cake(3)</p>
+        <p>16 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating13" id="star13_5" type="radio">
+          <label for="star13_5"></label>
+          <input value="4" name="rating13" id="star13_4" type="radio">
+          <label for="star13_4"></label>
+          <input value="3" name="rating13" id="star13_3" type="radio">
+          <label for="star13_3"></label>
+          <input value="2" name="rating13" id="star13_2" type="radio">
+          <label for="star13_2"></label>
+          <input value="1" name="rating13" id="star13_1" type="radio">
+          <label for="star13_1"></label>
+        </div>
+        <button data-id="13" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+    </div>
+
+    <div class="cake__header">
+      <h2 data-i18n="CristmasHeader" id="cristmasCake">Cristmas Cake</h2>
+    </div>
+    <div class="sweet_main" id="sweetMain">
+      <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="14"></i>
+        <img src="../image/Chiristmas.jpg" alt="foto" />
+        <p data-i18n="Pasta14">Christmas Cake(1)</p>
+        <p>18 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating14" id="star14_5" type="radio">
+          <label for="star14_5"></label>
+          <input value="4" name="rating14" id="star14_4" type="radio">
+          <label for="star14_4"></label>
+          <input value="3" name="rating14" id="star14_3" type="radio">
+          <label for="star14_3"></label>
+          <input value="2" name="rating14" id="star14_2" type="radio">
+          <label for="star14_2"></label>
+          <input value="1" name="rating14" id="star14_1" type="radio">
+          <label for="star14_1"></label>
+        </div>
+        <button data-id="14" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="15"></i>
+        <img src="../image/Chiristmas2.jpg" alt="foto" />
+        <p data-i18n="Pasta15">Christmas Cake(2)</p>
+        <p>18 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating15" id="star15_5" type="radio">
+          <label for="star15_5"></label>
+          <input value="4" name="rating15" id="star15_4" type="radio">
+          <label for="star15_4"></label>
+          <input value="3" name="rating15" id="star15_3" type="radio">
+          <label for="star15_3"></label>
+          <input value="2" name="rating15" id="star15_2" type="radio">
+          <label for="star15_2"></label>
+          <input value="1" name="rating15" id="star15_1" type="radio">
+          <label for="star15_1"></label>
+        </div>
+        <button data-id="15" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+      <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <i class="ri-heart-line" data-id="16"></i>
+        <img src="../image/Chiristmas3.jpg" alt="foto" />
+        <p data-i18n="Pasta16">Christmas Cake(3)</p>
+        <p>18 AZN</p>
+        <div class="rating">
+          <input value="5" name="rating16" id="star16_5" type="radio">
+          <label for="star16_5"></label>
+          <input value="4" name="rating16" id="star16_4" type="radio">
+          <label for="star16_4"></label>
+          <input value="3" name="rating16" id="star16_3" type="radio">
+          <label for="star16_3"></label>
+          <input value="2" name="rating16" id="star16_2" type="radio">
+          <label for="star16_2"></label>
+          <input value="1" name="rating16" id="star16_1" type="radio">
+          <label for="star16_1"></label>
+        </div>
+        <button data-id="16" data-i18n="buttons">Add basket</button>
+        <!-- <div class="modal_box">hdhhd</div> -->
+      </div>
+    </div>
+
+    <!--============================================ Main Sections ==========================================-->
+  </main>
+
+  <!--============================================ Footer Sections ========================================-->
+  <footer>
+    <div class="footer_container">
+      <div class="footer_a">
+        <a href="../html/contact.html" data-i18n="footerContact">Contact</a>
+        <a href="../html/about.html" data-i18n="footerAbout">About</a>
+        <a href="../html/vacancies.html" data-i18n="footerVacancies">Vacancies</a>
+        <a href="../html/İndex.html" data-i18n="footerHome">Home</a>
+      </div>
+    </div>
+    <div class="footer_sheet">
+      <div>
+        <p data-i18n="Nizami">Nizami: +994 55 551 60 01</p>
+        <p data-i18n="Merdakan">Mərdəkan: +994 55 551 60 02</p>
+      </div>
+      <div>
+        <p data-i18n="Yasamal">Yasamal: +994 55 551 60 03</p>
+        <p data-i18n="Bakixanov">Bakixanov: +994 55 551 60 04</p>
+      </div>
+    </div>
+    <div class="sheet_footer">
+      <p>e-mail : elvin.esgerov2109@gmail.com</p>
+      <hr />
+      <i class="ri-mail-fill"></i>
+    </div>
+    <div class="sheet_icon">
+      <a href="https://wa.me/+994503851383" class="ri-whatsapp-line" target="_blank"></a>
+      <a href="https://github.com/Elvinesgerov" class="ri-github-fill" target="_blank"></a>
+      <a href="https://www.linkedin.com/in/elvin-esgerov-5b0929290/" class="ri-linkedin-fill" target="_blank"></a>
+      <a href="https://www.instagram.com/esgerov.060" class="ri-instagram-line" target="_blank"></a>
+    </div>
+  </footer>
+  <!--============================================ Footer Sections ========================================-->
+
+  <script src="../js/App.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
