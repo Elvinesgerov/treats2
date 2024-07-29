@@ -8,6 +8,7 @@ let footer = document.querySelector("footer");
 let snow = document.querySelector("#snow");
 let body = document.querySelector("body");
 let darkMood = document.querySelector(".darkmood");
+let login = document.querySelector(".login");
 let headerContainer = document.querySelector(".header_container");
 let change = document.querySelector(".change");
 let sectionContainer = document.querySelector(".section_container");
@@ -19,6 +20,8 @@ let zeroContainerImg = document.querySelector(".zero_container img");
 let sweet_mainButton = document.querySelectorAll(".sweet_main div button");
 let sweet_mainIcon = document.querySelectorAll(".ri-heart-line");
 let toastContainer = document.querySelector(".toast-container");
+let compareIcon = document.querySelectorAll("#compareId")
+let compareFlag = true
 let spanTwo;
 let flag = true;
 let snowNumber = 150;
@@ -108,9 +111,6 @@ function loadingScreen() {
 textEffects();
 // =========================================== Loading ================================
 
-// =========================================== Js Modal================================
-
-// =========================================== Js Modal================================
 
 // =========================================== Change Img =============================
 setInterval(function () {
@@ -146,6 +146,9 @@ darkMood.addEventListener("click", () => {
     darkMood.style.backgroundColor = "black";
     darkMood.style.color = "white";
     darkMood.style.boxShadow = "10px 5px 5px #33BCD0";
+    login.style.backgroundColor = "black";
+    login.style.color = "white";
+    login.style.boxShadow = "10px 5px 5px #33BCD0";
     change.style.boxShadow = "10px 5px 5px #33BCD0";
     change.style.backgroundColor = "black";
     change.style.color = "white";
@@ -165,6 +168,10 @@ darkMood.addEventListener("click", () => {
     darkMood.style.backgroundColor = "#313B90";
     darkMood.style.color = "white";
     darkMood.style.boxShadow =
+      "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+    login.style.backgroundColor = "#313B90";
+    login.style.color = "white";
+    login.style.boxShadow =
       "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
     change.style.boxShadow =
       "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
@@ -427,29 +434,32 @@ i18next.use(i18nextBrowserLanguageDetector).init(
           headerContact: "Əlaqə",
           headerChange: "Dili Dəyişdirin",
           sections: "Bölmələr",
-          Birthday: "Ad günü",
-          Favorite: "Sevimli",
-          Fruit: "Meyvə",
-          Chocolate: "Şokolad",
-          Chrismas: "Milad",
+          Birthday: "Ad günü tortu",
+          CompareSections: "Muqayisə et",
+          GalerySections: "Şəkillər",
+          VideoSections: "Vidyolar",
+          Morethan: "Məhsullar",
+          Fruit: "Meyvəli tort",
+          Chocolate: "Şokoladlı tort",
+          Chrismas: "Milad tortu",
           Sweet: "Şirin yeyək, şirin danişaq",
-          // Compare: "Muqayisə et",
-          // See: "Bax",
-          // Detailed: "Ətraflı",
-          Pasta1: "Şokolad Tort",
+          Compare: "Muqayisə et",
+          See: "Bax",
+          Detailed: "Ətraflı",
+          Pasta1: "Şokoladlı Tort",
           buttons: "Səbətə əlavə",
-          Pasta2: "Meyvə Tortu",
-          Pasta3: "Çiyələk Tortu",
+          Pasta2: "Meyvəli Tortu",
+          Pasta3: "Çiyələkli Tortu",
           Pasta4: "Qış Tortu",
           Pasta5: "Ad günü tortu (1)",
           Pasta6: "Ad günü tortu (2)",
           Pasta7: "Ad günü tortu (3)",
-          Pasta8: "Meyvə Tortu (1)",
-          Pasta9: "Meyvə Tortu (2)",
-          Pasta10: "Meyvə Tortu (3)",
-          Pasta11: "Şokolad tortu (1)",
-          Pasta12: "Şokolad tortu (2)",
-          Pasta13: "Şokolad tortu (3)",
+          Pasta8: "Meyvəli Tortu (1)",
+          Pasta9: "Meyvəli Tortu (2)",
+          Pasta10: "Meyvəli Tortu (3)",
+          Pasta11: "Şokoladli tortu (1)",
+          Pasta12: "Şokoladli tortu (2)",
+          Pasta13: "Şokoladli tortu (3)",
           Pasta14: "Milad tortu (1)",
           Pasta15: "Milad tortu (2)",
           Pasta16: "Milad tortu (3)",
@@ -473,6 +483,8 @@ i18next.use(i18nextBrowserLanguageDetector).init(
           SuccessText: "Səbətə Əlave Olundu",
           Success: "Ugurlu!",
           SuccessTextTwo: "Kart silindi",
+          Faq: "Suallar",
+          Login: "Daxil ol"
         },
       },
       en: {
@@ -483,16 +495,19 @@ i18next.use(i18nextBrowserLanguageDetector).init(
           headerContact: "Contact",
           headerChange: "Change Language",
           sections: "Sections",
-          Birthday: "Birthday",
-          Favorite: `Favorite`,
-          Fruit: "Fruit",
-          Chocolate: "Chocolate",
-          Chrismas: "Chrismas",
+          Birthday: "Birthday cake",
+          CompareSections: "Compare",
+          GalerySections: "Galerya",
+          VideoSections: "Videos",
+          Morethan: "Products",
+          Fruit: "Fruit cake",
+          Chocolate: "Chocolate cake",
+          Chrismas: "Chrismas cake",
           Sweet: "Let's eat sweet, let's talk sweet",
           buttons: "Add basket",
-          // Compare: "Compare",
-          // See: "See",
-          // Detailed: "Detailed",
+          Compare: "Compare",
+          See: "See",
+          Detailed: "Detailed",
           Pasta1: "Chocolate cake",
           Pasta2: "Fruit cake",
           Pasta3: "Strawberry cake",
@@ -529,6 +544,8 @@ i18next.use(i18nextBrowserLanguageDetector).init(
           SuccessText: "Added to cart",
           Success: "Success!",
           SuccessTextTwo: "Removed from card",
+          Faq: "Faqs",
+          Login: "Login"
         },
       },
     },
@@ -549,6 +566,8 @@ i18next.use(i18nextBrowserLanguageDetector).init(
 function updateContent() {
   document.querySelector('[data-i18n="headerHome"]').textContent =
     i18next.t("headerHome");
+  document.querySelector('[data-i18n="Login"]').textContent =
+    i18next.t("Login");
   document.querySelector('[data-i18n="headerAbout"]').textContent =
     i18next.t("headerAbout");
   document.querySelector('[data-i18n="headerVacancies"]').textContent =
@@ -561,6 +580,16 @@ function updateContent() {
     i18next.t("sections");
   document.querySelector('[data-i18n="Birthday"]').textContent =
     i18next.t("Birthday");
+  document.querySelector('[data-i18n="CompareSections"]').textContent =
+    i18next.t("CompareSections");
+  document.querySelectorAll('[data-i18n="GalerySections"]').forEach(item => {
+    item.textContent = i18next.t("GalerySections");
+  })
+  document.querySelectorAll('[data-i18n="VideoSections"]').forEach(item => {
+    item.textContent = i18next.t("VideoSections");
+  })
+  document.querySelector('[data-i18n="Morethan"]').textContent =
+    i18next.t("Morethan");
   document.querySelector('[data-i18n="Favorite"]').innerHTML = i18next.t(
     'Favorite <sup style = "color:white; font-weight: 900; font-size:1.5rem"></sup>'
   );
@@ -572,12 +601,12 @@ function updateContent() {
     i18next.t("Chrismas");
   document.querySelector('[data-i18n="Sweet"]').textContent =
     i18next.t("Sweet");
-  // document.querySelector('[data-i18n="Compare"]').textContent =
-  //   i18next.t("Compare");
-  // document.querySelector('[data-i18n="See"]').textContent =
-  //   i18next.t("See");
-  // document.querySelector('[data-i18n="Detailed"]').textContent =
-  //   i18next.t("Detailed");
+  document.querySelector('[data-i18n="Compare"]').textContent =
+    i18next.t("Compare");
+  document.querySelector('[data-i18n="See"]').textContent =
+    i18next.t("See");
+  document.querySelector('[data-i18n="Detailed"]').textContent =
+    i18next.t("Detailed");
   document.querySelector('[data-i18n="Pasta1"]').textContent =
     i18next.t("Pasta1");
   document.querySelector('[data-i18n="Pasta2"]').textContent =
@@ -643,6 +672,9 @@ function updateContent() {
     i18next.t("CristmasHeader");
   document.querySelector('[data-i18n="MoreThan"]').textContent =
     i18next.t("MoreThan");
+  document.querySelectorAll('[data-i18n="Faq"]').forEach(item => {
+    item.textContent = i18next.t("Faq");
+  })
   let SuccessTextTwo = document.querySelector('[data-i18n="SuccessTextTwo"]');
   if (SuccessTextTwo) {
     SuccessTextTwo.textContent = i18next.t("SuccessTextTwo");
@@ -758,9 +790,132 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // =========================================== Notification JS ========================
 
+
+// =========================================== favoriteNumber ========================
 function favoriteNumber() {
   let favorite = JSON.parse(localStorage.getItem("favorite"));
   let favSup = document.querySelector("#favSup sup");
   favSup.innerHTML = favorite.length;
 }
 favoriteNumber();
+// =========================================== favoriteNumber ========================
+
+// =========================================== Searce Sections Func ========================
+function searchSections() {
+  const input = document.querySelector('.searcesections');
+  const filter = input.value.toLowerCase();
+  const sectionLinks = document.querySelectorAll('.section_container a');
+
+  sectionLinks.forEach(link => {
+    const text = link.innerText.toLowerCase();
+    if (text.includes(filter)) {
+      link.style.display = "";
+    } else {
+      link.style.display = "none";
+    }
+  });
+}
+// =========================================== Searce Sections Func ========================
+
+// =========================================== Swiper Js ========================
+let swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  effect: "slide",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+let progress = 50
+let startX = 0
+let active = 0
+let isDown = false
+
+const speedWheel = 0.02
+const speedDrag = -0.1
+
+const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
+
+const $items = document.querySelectorAll('.carousel-item')
+const $cursors = document.querySelectorAll('.cursor')
+
+const displayItems = (item, index, active) => {
+  const zIndex = getZindex([...$items], active)[index]
+  item.style.setProperty('--zIndex', zIndex)
+  item.style.setProperty('--active', (index - active) / $items.length)
+}
+
+const animate = () => {
+  progress = Math.max(0, Math.min(progress, 100))
+  active = Math.floor(progress / 100 * ($items.length - 1))
+
+  $items.forEach((item, index) => displayItems(item, index, active))
+}
+animate()
+
+$items.forEach((item, i) => {
+  item.addEventListener('click', () => {
+    progress = (i / $items.length) * 100 + 10
+    animate()
+  })
+})
+
+
+const handleWheel = e => {
+  const wheelProgress = e.deltaY * speedWheel
+  progress = progress + wheelProgress
+  animate()
+}
+
+const handleMouseMove = (e) => {
+  if (e.type === 'mousemove') {
+    $cursors.forEach(($cursor) => {
+      $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+    })
+  }
+  if (!isDown) return
+  const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
+  const mouseProgress = (x - startX) * speedDrag
+  progress = progress + mouseProgress
+  startX = x
+  animate()
+}
+
+const handleMouseDown = e => {
+  isDown = true
+  startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
+}
+
+const handleMouseUp = () => {
+  isDown = false
+}
+
+document.addEventListener('mousewheel', handleWheel)
+document.addEventListener('mousedown', handleMouseDown)
+document.addEventListener('mousemove', handleMouseMove)
+document.addEventListener('mouseup', handleMouseUp)
+document.addEventListener('touchstart', handleMouseDown)
+document.addEventListener('touchmove', handleMouseMove)
+document.addEventListener('touchend', handleMouseUp)
+// =========================================== Swiper Js ========================
+
+// =========================================== Compare js ================================
+compareIcon.forEach(item => {
+  item.addEventListener("click", () => {
+    if (compareFlag == true) {
+      item.classList.remove("ri-loop-left-line");
+      item.classList.add("ri-check-double-line")
+      compareFlag = false
+    } else {
+      item.classList.remove("ri-check-double-line")
+      item.classList.add("ri-loop-left-line");
+      compareFlag = true
+    }
+  })
+})
+// =========================================== Compare js================================

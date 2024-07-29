@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="style.css" />
   <!--============================================ CSS Link =====================================-->
 
+  <!--============================================ Swiper Link =====================================-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!--============================================ Swiper Link =====================================-->
+
   <!--============================================ WebSite Logo =================================-->
   <link rel="shortcut icon" type="image/x-icon" href="../image/logoFoto.webp" />
   <!--============================================ WebSite Logo =================================-->
@@ -54,6 +58,17 @@
   <!--============================================ Loading =================================-->
 
   <header>
+    <!--============================================ Social Page =================================-->
+    <div class="fixed">
+      <div class="fixed-whatsapp">
+        <a href="https://wa.me/+994503851383" target="_blank"><i class="ri-whatsapp-line"></i></a>
+      </div>
+      <div class="fixed-instagram">
+        <a href="https://www.instagram.com/esgerov.060" target="_blank"><i class="ri-instagram-line"></i></a>
+      </div>
+    </div>
+    <!--============================================ Social Page =================================-->
+
     <!--============================================ Notification animation =================================-->
     <div class="toast-container"></div>
     <!--============================================ Notification animation =================================-->
@@ -71,7 +86,7 @@
     <!--============================================ Header Sections ========================================-->
     <nav>
       <div class="header_container">
-        <img class="logo" src="../image/logoFoto.webp" alt="logo" />
+        <img class="logoheader" src="../image/logoFoto.webp" alt="logo" />
         <div class="header_title">
           <a href="../html/index.html" data-i18n="headerHome">Home</a>
           <a href="../html/about.html" data-i18n="headerAbout">About</a>
@@ -84,6 +99,9 @@
             <i class="ri-moon-line"></i>
             <i class="ri-sun-line"></i>
           </div>
+          <div class="darkmood login">
+            <a href="" data-i18n="Login">Login</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -95,7 +113,13 @@
       <img src="../image/Foto7.jpg" alt="" />
       <div class="section_container">
         <h2 data-i18n="sections">Sections</h2>
+        <input class="searcesections" type="text" placeholder="...Searce" oninput="searchSections()">
         <a href="/html/favorite.html" data-i18n="Favorite" id="favSup">Favorite</a>
+        <a href="#" data-i18n="CompareSections">Compare</a>
+        <a href="#" data-i18n="GalerySections">Galery</a>
+        <a href="#" data-i18n="VideoSections">Video</a>
+        <a href="#" data-i18n="Faq">Faqs</a>
+        <a href="#" data-i18n="Morethan">Products</a>
         <a href="#birthdayCake" data-i18n="Birthday">Birthday Cakes</a>
         <a href="#fruitCake" data-i18n="Fruit">Fruit Cakes</a>
         <a href="#chocolateCake" data-i18n="Chocolate">Chocolate</a>
@@ -133,18 +157,18 @@
         </div>
         <button data-id="1" data-i18n="buttons">Add basket</button>
         <div class="modal_box">
-          <a href="" class="ri-loop-left-line">
+          <a class="ri-loop-left-line" id="compareId">
             <div class="tooltip-hover">
               <div class="tooltip-1">
-                <p>Compare</p>
+                <p data-i18n="Compare">Compare</p>
               </div>
               <i href="" class="ri-arrow-down-s-fill"></i>
             </div>
           </a>
-          <a href="" class="ri-zoom-in-line">
+          <a class="ri-zoom-in-line">
             <div class="tooltip-hover vue">
               <div class="tooltip-1">
-                <p>See</p>
+                <p data-i18n="See">See</p>
               </div>
               <i href="" class="ri-arrow-down-s-fill"></i>
             </div>
@@ -152,7 +176,7 @@
           <a href="" class="ri-arrow-right-s-line">
             <div class="tooltip-hover vue more-than">
               <div class="tooltip-1">
-                <p>Detailed</p>
+                <p data-i18n="Detailed">Detailed</p>
               </div>
               <i href="" class="ri-arrow-down-s-fill"></i>
             </div>
@@ -182,9 +206,32 @@
           <label for="star1_2"></label>
         </div>
         <button data-id="2" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">
-                hdhhd
-            </div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
 
       <!-- Məhsul 3 -->
@@ -209,9 +256,32 @@
           <label for="star1_3"></label>
         </div>
         <button data-id="3" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">
-                hdhhd
-            </div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
 
       <!-- Məhsul 4 -->
@@ -236,9 +306,32 @@
           <label for="star1_4"></label>
         </div>
         <button data-id="4" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">
-                hdhhd
-            </div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -291,7 +384,32 @@
           <label for="star21"></label>
         </div>
         <button data-id="5" data-i18n="buttons" class="btn">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -314,7 +432,32 @@
           <label for="star31"></label>
         </div>
         <button data-id="6" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -337,7 +480,32 @@
           <label for="star41"></label>
         </div>
         <button data-id="7" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -366,7 +534,32 @@
           <label for="star85"></label>
         </div>
         <button data-id="8" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -389,7 +582,32 @@
           <label for="star95"></label>
         </div>
         <button data-id="9" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -412,7 +630,32 @@
           <label for="star105"></label>
         </div>
         <button data-id="10" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -441,7 +684,32 @@
           <label for="star11_1"></label>
         </div>
         <button data-id="11" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -464,7 +732,32 @@
           <label for="star12_1"></label>
         </div>
         <button data-id="12" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -487,7 +780,32 @@
           <label for="star13_1"></label>
         </div>
         <button data-id="13" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -516,7 +834,32 @@
           <label for="star14_1"></label>
         </div>
         <button data-id="14" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -539,7 +882,32 @@
           <label for="star15_1"></label>
         </div>
         <button data-id="15" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
       <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease" class="box playing">
         <div class="wave"></div>
@@ -562,12 +930,433 @@
           <label for="star16_1"></label>
         </div>
         <button data-id="16" data-i18n="buttons">Add basket</button>
-        <!-- <div class="modal_box">hdhhd</div> -->
+        <div class="modal_box">
+          <a class="ri-loop-left-line" id="compareId">
+            <div class="tooltip-hover">
+              <div class="tooltip-1">
+                <p data-i18n="Compare">Compare</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a class="ri-zoom-in-line">
+            <div class="tooltip-hover vue">
+              <div class="tooltip-1">
+                <p data-i18n="See">See</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+          <a href="" class="ri-arrow-right-s-line">
+            <div class="tooltip-hover vue more-than">
+              <div class="tooltip-1">
+                <p data-i18n="Detailed">Detailed</p>
+              </div>
+              <i href="" class="ri-arrow-down-s-fill"></i>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
-    <!--============================================ Main Sections ==========================================-->
+    <div class="cake__header">
+      <h2 id="cristmasCake" data-i18n="GalerySections">Galerya</h2>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"></div>
+        <div class="swiper-slide slide2"></div>
+        <div class="swiper-slide slide3"></div>
+        <div class="swiper-slide slide4"></div>
+        <div class="swiper-slide slide5"></div>
+        <div class="swiper-slide slide6"></div>
+        <div class="swiper-slide slide7"></div>
+        <div class="swiper-slide slide8"></div>
+        <div class="swiper-slide slide9"></div>
+        <div class="swiper-slide slide10"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="book-container">
+      <div class="card">
+        <div class="cover">
+          <div class="front front1"></div>
+          <div class="back  back1"></div>
+        </div>
+        <div class="page">
+          <ul style="font-size: 16px;">
+            <li>Vanil, şokolad, və ya başqa bir dad seçimi</li>
+            <li>Kərə yağı kremi</li>
+            <li>Şokolad qanası</li>
+            <li>Krem pendir </li>
+            <li>Mouse kremi</li>
+            <li>Meyvə pureləri və ya mürəbbələri</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cover">
+          <div class="front front2"></div>
+          <div class="back back2"></div>
+        </div>
+        <div class="page">
+          <ul style="font-size: 16px;">
+            <li>Fondan</li>
+            <li>Ganaj</li>
+            <li>Meyvə dolğuları</li>
+            <li>Karamel</li>
+            <li>Çərəzlər</li>
+            <li>Kəsmik</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cover">
+          <div class="front front3"></div>
+          <div class="back back3"></div>
+        </div>
+        <div class="page">
+          <ul style="font-size: 16px;">
+            <li>Narıncı Fondan</li>
+            <li>Şokolad qanası</li>
+            <li>Krem Peynir Dolğusu</li>
+            <li>Marzipan</li>
+            <li>Şokolad Çipləri</li>
+            <li>Caramel Sauce</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-container">
+      <div class="card">
+        <div class="cover">
+          <div class="front front4"></div>
+          <div class="back back4"></div>
+        </div>
+        <div class="page">
+          <ul style="font-size: 16px;">
+            <li>Fondan</li>
+            <li>Royal İcing</li>
+            <li>Gıda Boyası Markerləri</li>
+            <li>Şəkər Pastası</li>
+            <li>Çikolat Çipləri və ya Topları</li>
+            <li>Yeniləbilən Şəkillər</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cover">
+          <div class="front front5"></div>
+          <div class="back back5"></div>
+        </div>
+        <div class="page">
+          <ul style="font-size: 16px;">
+            <li>Biskvit Əsaslı Tort</li>
+            <li>Mango və Ananas Dolğusu</li>
+            <li>Coconut Frosting</li>
+            <li>Karamelizləşdirilmiş Fındıq</li>
+            <li>Krem Brulee Toping</li>
+            <li>Edible Flowers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cover">
+          <div class="front front6"></div>
+          <div class="back back6"></div>
+        </div>
+        <div class="page">
+          <ul style="font-size: 16px;">
+            <li>Biskvit Əsaslı Tort</li>
+            <li>Dolğu</li>
+            <li>Molekulyar Gastronomiya Jel</li>
+            <li>Edible Petri Dishes</li>
+            <li>Buttercream</li>
+            <li>Meyvə pureləri və ya mürəbbələri</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">01</div>
+          <img
+            src="https://images.pexels.com/photos/2531546/pexels-photo-2531546.jpeg?cs=srgb&dl=pexels-rodrigo-souza-1275988-2531546.jpg&fm=jpg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">02</div>
+          <img src="https://i.pinimg.com/736x/25/de/73/25de739abf77df69bd64d0a9fcd220d1.jpg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">03</div>
+          <img src="https://www.bakersfun.com/wp-content/uploads/2021/07/Cake-304-copy.jpg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">04</div>
+          <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">05</div>
+          <img src="https://i0.wp.com/pastryperfection.pk/wp-content/uploads/2021/03/IMG_9325.png?fit=408%2C612" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">06</div>
+          <img src="https://t3.ftcdn.net/jpg/05/58/14/66/360_F_558146635_Pjgj1F8Au64JTeB9VGuas0Fm09OhEOGh.jpg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">07</div>
+          <img
+            src="https://www.marthastewart.com/thmb/AEnV9zVVuuEIJxsaLfbhrqrO2dY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/a99510_0902_boycake_vert-91bebfdcd2a3476da017e619e61b7c24.jpg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">08</div>
+          <img src="https://i.ytimg.com/vi/3OwJDYCxd9Q/maxresdefault.jpg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">09</div>
+          <img src="https://i.pinimg.com/736x/7e/b5/2e/7eb52e5f677fa360f452f8b8c4e71b30.jpg" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="num">10</div>
+          <img src="https://i.pinimg.com/474x/cc/cc/6a/cccc6ae9ecaeda6e559c45fde8894620.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor cursor2"></div>
+
+    <div class="card-box__container">
+      <div class="card-box">
+        <div class="wrapper-box">
+          <img src="https://as1.ftcdn.net/v2/jpg/03/11/64/04/1000_F_311640496_1Bycs4BBFL0VLzbwedCPZyOVWxr0ZqLQ.jpg"
+            alt="" class="cover-image" />
+        </div>
+        <img
+          src="https://www.farahsdessertheaven.com/cdn/shop/products/VW-Cake-gold-chocolate-sail-website_300x300.png?v=1613504079"
+          alt="" class="character">
+      </div>
+      <div class="card-box">
+        <div class="wrapper-box">
+          <img src="https://as1.ftcdn.net/v2/jpg/03/11/64/04/1000_F_311640496_1Bycs4BBFL0VLzbwedCPZyOVWxr0ZqLQ.jpg"
+            alt="" class="cover-image">
+        </div>
+        <img
+          src="https://www.farahsdessertheaven.com/cdn/shop/products/ChocShardGoldDripCake-Website_300x300.png?v=1658267018"
+          alt="" class="character">
+      </div>
+
+      <div class="card-box">
+        <div class="wrapper-box">
+          <img src="https://as1.ftcdn.net/v2/jpg/03/11/64/04/1000_F_311640496_1Bycs4BBFL0VLzbwedCPZyOVWxr0ZqLQ.jpg"
+            alt="" class="cover-image">
+        </div>
+        <img
+          src="https://www.farahsdessertheaven.com/cdn/shop/products/MakeUpThemeCake-Website_300x300.png?v=1640734088"
+          alt="" class="character">
+      </div>
+    </div>
+
+    <div class="card-box__container">
+      <div class="card-box">
+        <div class="wrapper-box">
+          <img src="https://as1.ftcdn.net/v2/jpg/03/11/64/04/1000_F_311640496_1Bycs4BBFL0VLzbwedCPZyOVWxr0ZqLQ.jpg"
+            alt="" class="cover-image">
+        </div>
+        <img
+          src="https://png.pngtree.com/png-clipart/20230206/ourmid/pngtree-happy-birthday-cake-28-png-image_6586444.png"
+          alt="" class="character">
+      </div>
+
+      <div class="card-box">
+        <div class="wrapper-box">
+          <img src="https://as1.ftcdn.net/v2/jpg/03/11/64/04/1000_F_311640496_1Bycs4BBFL0VLzbwedCPZyOVWxr0ZqLQ.jpg"
+            alt="" class="cover-image">
+        </div>
+        <img src="https://freepngimg.com/thumb/birthday_cake/3-2-birthday-cake-png-picture-thumb.png" alt=""
+          class="character">
+      </div>
+
+      <div class="card-box">
+        <div class="wrapper-box">
+          <img src="https://as1.ftcdn.net/v2/jpg/03/11/64/04/1000_F_311640496_1Bycs4BBFL0VLzbwedCPZyOVWxr0ZqLQ.jpg"
+            alt="" class="cover-image">
+        </div>
+        <img
+          src="https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-birthday-cake-dessert-gourmet-pink-three-dimensional-png-image_9119671.png"
+          alt="" class="character">
+      </div>
+    </div>
+
+    <div class="container-box">
+      <div class="carousel1">
+        <div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
+        <div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
+        <div class="carousel-rotation-direction">
+          <ul class="carousel-item-wrapper" style="--_num-elements: 11">
+            <li class="carousel-item1"
+              style="--_index: 2; --_image-url: url('https://www.janespatisserie.com/wp-content/uploads/2020/10/IMG_5635-2.jpg')">
+              <a target="_blank">Architecture Example 2</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 3; --_image-url: url('https://www.fabmood.com/inspiration/wp-content/uploads/2022/04/birthday-cake-38.jpg')">
+              <a target="_blank">Architecture Example 3</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 4; --_image-url: url('https://cdn.shopify.com/s/files/1/0850/9016/products/Chocolate_Overload_Drip_Cake.JPG?v=1540743853')">
+              <a target="_blank">Architecture Example 4</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 1; --_image-url: url('https://i.pinimg.com/550x/58/64/9c/58649c49043a4d522acb2094742129eb.jpg')">
+              <a target="_blank">Architecture Example 5</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 6; --_image-url: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9jRiB5mqPEk4GKmjHwvZD-TXfsF6ie7UoY0FNrO83bkzEKv2guU_Cua8AevJYPEhH5DA&usqp=CAU')">
+              <a target="_blank">Architecture Example 6</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 7; --_image-url: url('https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/5817/1707310582_8-sky-blue-happy-birthday-cake-clipart-three-candles-whimsical.jpg&width=600&height=600&quality=90&format=auto&fit=pad')">
+              <a target="_blank">Architecture Example 7</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 8; --_image-url: url('https://i.pinimg.com/originals/9e/85/05/9e8505ae268779750c8c5fea8a41fb5b.jpg')">
+              <a target="_blank">Architecture Example 8</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 9; --_image-url: url('https://i.pinimg.com/736x/7e/d2/26/7ed226e7732076e876a0a9aff49ac933.jpg')">
+              <a target="_blank">Architecture Example 9</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 10; --_image-url: url('https://i.pinimg.com/236x/1e/97/42/1e9742d28a85390e3f35d7c706d5af64--carousel-cake-carousel-party.jpg')">
+              <a target="_blank">Architecture Example 10</a>
+            </li>
+            <li class="carousel-item1"
+              style="--_index: 11; --_image-url: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToPHbD_OIY7arGA6pBnjxZsFZwNZvjYDwV1wkdXO3mzLdwjX2B1kmR2kDww4lbppwem6o&usqp=CAU')">
+              <a target="_blank">Architecture Example 11</a>
+            </li>
+            <li class="carousel-ground"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cake__header">
+      <h2 id="cristmasCake" data-i18n="VideoSections">Video</h2>
+    </div>
+
+    <div class="video__container">
+      <iframe style="border-radius: 15px;" width="450" height="300"
+        src="https://www.youtube.com/embed/ySeXb9SgFOQ?si=c489P_gSdpbMXdeF" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <iframe style="border-radius: 15px;" width="450" height="300"
+        src="https://www.youtube.com/embed/h2XJGWzaiII?si=xRANuMKZGZFC-oAV" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <iframe style="border-radius: 15px;" width="450" height="300"
+        src="https://www.youtube.com/embed/ETesLok70Ro?si=pU8tRSYPRy1JzmKJ" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <iframe style="border-radius: 15px;" width="450" height="300"
+        src="https://www.youtube.com/embed/reisBtIANys?si=eNyDv2szvRDztVtv" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <iframe style="border-radius: 15px;" width="450" height="300"
+        src="https://www.youtube.com/embed/2HShQMMlZSg?si=0lT7WZm4-wYDKnol" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <iframe style="border-radius: 15px;" width="450" height="300"
+        src="https://www.youtube.com/embed/3HOK9Yg0y2A?si=PliCwTtKICiP04kD" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="cake__header">
+      <h2 id="cristmasCake" data-i18n="Faq">Faq</h2>
+    </div>
+
+    <div class="questionboxs">
+
+      <div class="problems">
+        <i class="ri-circle-fill"></i>
+        <p class="questiontext">Terminal qəbz vermədi?</p>
+      </div>
+
+      <div class="answer">
+        <p>Əgər ödənişi <span>"eManat"</span> terminalı ilə etmisinizsə <span>070 382 18 11</span> nömrəsinə
+          <span>"WhatsApp"</span> ilə yazaraq qəbzin nüsxəsini əldə edə bilərsiniz.</p>
+        <p>Ödənişi <span>"Milliön"</span> terminalı ilə etmisinizsə <span>"070 382 18 11"</span> nömrəsinə
+          <span>"WhatsApp"</span> ilə yazaraq qəbzin nüsxəsini əldə edə bilərsiniz. Və ya
+          <span>"https://www.million.az/"</span> saytına daxil olub, sağ aşağıda çıxan onlayn-çat hissəsinə girib
+          nüsxəni tələb edə bilərsiniz. Əldə etdiyini nüsxəni bizə ataraq sifarişinizi tamamlaya bilərsiniz.</p>
+        <p><span>Qeyd:</span> Həmin nömrələr bizə aid deyil! Uyğun olaraq terminalların qaynar xətt nömrələridir. İş
+          saatları haqqında məlumatımız yoxdur.</p>
+      </div>
+
+      <div class="problems">
+        <i class="ri-circle-fill"></i>
+        <p class="questiontext">Telefon nömrəsi vacibdir?</p>
+      </div>
+
+      <div class="answer">
+        <p>Müştərilərdə çıxan <span>texniki problem</span> vəya baş verən <span>dələduzluq</span> hallarına görə hər
+          hesabda <span>Azərbaycan Respublikasına</span> aid olan <span>telefon nömrəsinin</span> təsdiqi vacibdir.</p>
+      </div>
+
+      <div class="problems">
+        <i class="ri-circle-fill"></i>
+        <p class="questiontext">Iş qrafikiniz necədir?</p>
+      </div>
+
+      <div class="answer">
+        <p>İş qrafikimiz <span>hər gün 10.00 - 00.00</span> arasıdır. Əgər ödənişi iş zamanından sonra eləmisinizsə
+          narahat olmayın, iş zamanı daxilində ödənişinizə baxacayıq.</p>
+      </div>
+
+    </div>
   </main>
+  <!--============================================ Main Sections ==========================================-->
 
   <!--============================================ Footer Sections ========================================-->
   <footer>
@@ -603,6 +1392,7 @@
   </footer>
   <!--============================================ Footer Sections ========================================-->
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../js/App.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
