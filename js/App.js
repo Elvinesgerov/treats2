@@ -484,7 +484,48 @@ i18next.use(i18nextBrowserLanguageDetector).init(
           Success: "Ugurlu!",
           SuccessTextTwo: "Kart silindi",
           Faq: "Suallar",
-          Login: "Daxil ol"
+          Login: "Daxil ol",
+          li1: "Vanil, şokolad, və ya başqa bir dad seçimi",
+          li2: "Kərə yağı kremi",
+          li3: "Şokolad qanası",
+          li4: "Krem pendir",
+          li5: "Mouse kremi",
+          li6: "Meyvə pureləri və ya mürəbbələri",
+          li9: "Meyvə dolğuları",
+          li10: "Karamel",
+          li11: "Çərəzlər",
+          li12: "Kəsmik",
+          li13: "Narıncı Fondan",
+          li14: "Şokolad qanası",
+          li15: "Krem Peynir Dolğusu",
+          li17: "Şokolad Çipləri",
+          li18: "Caramel Sauce",
+          li21: "Gıda Boyası Markerləri",
+          li22: "Şəkər Pastası",
+          li23: "Çikolat Çipləri və ya Topları",
+          li24: "Yeniləbilən Şəkillər",
+          li25: "Biskvit Əsaslı Tort",
+          li26: "Mango və Ananas Dolğusu",
+          li27: "Coconut Frosting",
+          li28: "Karamelizləşdirilmiş Fındıq",
+          li29: "Krem Brulee Toping",
+          li30: "Yeməli Çiçəklər",
+          li31: "Biskvit Əsaslı Tort",
+          li32: "Dolğu",
+          li33: "Molekulyar Gastronomiya Jel",
+          li34: "Edible Petri Dishes",
+          li35: "Kərə yağı",
+          li36: "Meyvə pureləri və ya mürəbbələri",
+          faq1: "Hansı tort ləzzətləri və içlikləri təklif edirsiniz?",
+          faq2: "Mən tortumu yüksəltmək istəyirəm, tort və keks stendlərini icarəyə götürürsən?",
+          faq3: "Tortlarınızı çatdırırsınız?",
+          faq4: "Tortu nə vaxt götürə bilərəm?",
+          faq5: "Tort sifarişi vermək üçün görüşə ehtiyacım varmı?",
+          ans1: "Hər növ tortlar mövcuddur",
+          ans2: "Bəli! Həftə sonu üçün tort və keks stendlərimizi 40 dollara icarəyə veririk.",
+          ans3: "Bəli! Biz Tulsa və ətraf icmalar daxilində çatdırılma təklif edirik, zəhmət olmasa çatdırılma təklifi almaq üçün bizə zəng edin.",
+          ans4: "Həftənin hər günü",
+          ans5: "Xeyr, tort sifarişinizi 918-994-4490 nömrəsinə zəng etməklə və ya müntəzəm olaraq mağazaya yaxınlaşaraq verə bilərsiniz iş saatları.",
         },
       },
       en: {
@@ -545,7 +586,48 @@ i18next.use(i18nextBrowserLanguageDetector).init(
           Success: "Success!",
           SuccessTextTwo: "Removed from card",
           Faq: "Faqs",
-          Login: "Login"
+          Login: "Login",
+          li1: "Vanilla, chocolate, or other flavor choice",
+          li2: "Butter cream",
+          li3: "Chocolate blood",
+          li4: "Cream cheese",
+          li5: "Mouse cream",
+          li6: "Fruit purees or jams",
+          li9: "Fruit fillings",
+          li10: "Caramel",
+          li11: "Cookies",
+          li12: "Cottage cheese",
+          li13: "Orange Background",
+          li14: "Chocolate blood",
+          li15: "Cream Cheese Filling",
+          li17: "Chocolate Chips",
+          li18: "Caramel Sauce",
+          li21: "Food Coloring Markers",
+          li22: "Sugar Pie",
+          li23: "Chocolate Chips or Balls",
+          li24: "Updateable Images",
+          li25: "Biscuit-Based Cake",
+          li26: "Mango and Pineapple Filling",
+          li27: "Coconut Frosting",
+          li28: "Caramelized Hazelnuts",
+          li29: "Creme Brulee Topping",
+          li30: "Edible Flowers",
+          li31: "Biscuit-Based Cake",
+          li32: "Filling",
+          li33: "Molecular Gastronomy Gel",
+          li34: "Edible Petri Dishes",
+          li35: "Butter",
+          li36: "Fruit purees or jams",
+          faq1: "What cake flavors and fillings do you offer?",
+          faq2: "I want to elevate my cake, do you rent your cake and cupcake stands?",
+          faq3: "Do you deliver your cakes?",
+          faq4: "When can I pick up my cake?",
+          faq5: "Do I need an appointment to place a cake order?",
+          ans1: "All kinds of cakes are available",
+          ans2: "Yes! We rent our cake and cupcake stands for $40 for the weekend.",
+          ans3: "Yes! We offer delivery within Tulsa and surrounding communities, please call us to receive a delivery quote.",
+          ans4: "Every day of the week",
+          ans5: "No, you can place your cake order by calling us at 918-994-4490 or by coming into the store during regular business hours.",
         },
       },
     },
@@ -601,12 +683,15 @@ function updateContent() {
     i18next.t("Chrismas");
   document.querySelector('[data-i18n="Sweet"]').textContent =
     i18next.t("Sweet");
-  document.querySelector('[data-i18n="Compare"]').textContent =
-    i18next.t("Compare");
-  document.querySelector('[data-i18n="See"]').textContent =
-    i18next.t("See");
-  document.querySelector('[data-i18n="Detailed"]').textContent =
-    i18next.t("Detailed");
+  document.querySelectorAll('[data-i18n="Compare"]').forEach(item => {
+    item.textContent = i18next.t("Compare");
+  })
+  document.querySelectorAll('[data-i18n="See"]').forEach(item => {
+    item.textContent = i18next.t("See");
+  })
+  document.querySelectorAll('[data-i18n="Detailed"]').forEach(item => {
+    item.textContent = i18next.t("Detailed");
+  })
   document.querySelector('[data-i18n="Pasta1"]').textContent =
     i18next.t("Pasta1");
   document.querySelector('[data-i18n="Pasta2"]').textContent =
@@ -672,6 +757,88 @@ function updateContent() {
     i18next.t("CristmasHeader");
   document.querySelector('[data-i18n="MoreThan"]').textContent =
     i18next.t("MoreThan");
+  document.querySelector('[data-i18n="li1"]').textContent =
+    i18next.t("li1");
+  document.querySelector('[data-i18n="li2"]').textContent =
+    i18next.t("li2");
+  document.querySelector('[data-i18n="li3"]').textContent =
+    i18next.t("li3");
+  document.querySelector('[data-i18n="li4"]').textContent =
+    i18next.t("li4");
+  document.querySelector('[data-i18n="li5"]').textContent =
+    i18next.t("li5");
+  document.querySelector('[data-i18n="li6"]').textContent =
+    i18next.t("li6");
+  document.querySelector('[data-i18n="li9"]').textContent =
+    i18next.t("li9");
+  document.querySelector('[data-i18n="li10"]').textContent =
+    i18next.t("li10");
+  document.querySelector('[data-i18n="li11"]').textContent =
+    i18next.t("li11");
+  document.querySelector('[data-i18n="li12"]').textContent =
+    i18next.t("li12");
+  document.querySelector('[data-i18n="li13"]').textContent =
+    i18next.t("li13");
+  document.querySelector('[data-i18n="li14"]').textContent =
+    i18next.t("li14");
+  document.querySelector('[data-i18n="li15"]').textContent =
+    i18next.t("li15");
+  document.querySelector('[data-i18n="li17"]').textContent =
+    i18next.t("li17");
+  document.querySelector('[data-i18n="li18"]').textContent =
+    i18next.t("li18");
+  document.querySelector('[data-i18n="li21"]').textContent =
+    i18next.t("li21");
+  document.querySelector('[data-i18n="li22"]').textContent =
+    i18next.t("li22");
+  document.querySelector('[data-i18n="li23"]').textContent =
+    i18next.t("li23");
+  document.querySelector('[data-i18n="li24"]').textContent =
+    i18next.t("li24");
+  document.querySelector('[data-i18n="li25"]').textContent =
+    i18next.t("li25");
+  document.querySelector('[data-i18n="li26"]').textContent =
+    i18next.t("li26");
+  document.querySelector('[data-i18n="li27"]').textContent =
+    i18next.t("li27");
+  document.querySelector('[data-i18n="li28"]').textContent =
+    i18next.t("li28");
+  document.querySelector('[data-i18n="li29"]').textContent =
+    i18next.t("li29");
+  document.querySelector('[data-i18n="li30"]').textContent =
+    i18next.t("li30");
+  document.querySelector('[data-i18n="li31"]').textContent =
+    i18next.t("li31");
+  document.querySelector('[data-i18n="li32"]').textContent =
+    i18next.t("li32");
+  document.querySelector('[data-i18n="li33"]').textContent =
+    i18next.t("li33");
+  document.querySelector('[data-i18n="li34"]').textContent =
+    i18next.t("li34");
+  document.querySelector('[data-i18n="li35"]').textContent =
+    i18next.t("li35");
+  document.querySelector('[data-i18n="li36"]').textContent =
+    i18next.t("li36");
+  document.querySelector('[data-i18n="faq1"]').textContent =
+    i18next.t("faq1");
+  document.querySelector('[data-i18n="faq1"]').textContent =
+    i18next.t("faq2");
+  document.querySelector('[data-i18n="faq2"]').textContent =
+    i18next.t("faq3");
+  document.querySelector('[data-i18n="faq3"]').textContent =
+    i18next.t("faq4");
+  document.querySelector('[data-i18n="faq5"]').textContent =
+    i18next.t("faq5");
+  document.querySelector('[data-i18n="ans1"]').textContent =
+    i18next.t("ans1");
+  document.querySelector('[data-i18n="ans2"]').textContent =
+    i18next.t("ans2");
+  document.querySelector('[data-i18n="ans3"]').textContent =
+    i18next.t("ans3");
+  document.querySelector('[data-i18n="ans4"]').textContent =
+    i18next.t("ans4");
+  document.querySelector('[data-i18n="ans5"]').textContent =
+    i18next.t("ans5");
   document.querySelectorAll('[data-i18n="Faq"]').forEach(item => {
     item.textContent = i18next.t("Faq");
   })
@@ -919,3 +1086,32 @@ compareIcon.forEach(item => {
   })
 })
 // =========================================== Compare js================================
+
+
+// =========================================== Faq js================================
+const problems = document.querySelectorAll(".problems");
+const answers = document.querySelectorAll(".answer");
+
+problems.forEach((problem, index) => {
+  const icon = problem.querySelector("i");
+  problem.addEventListener("click", () => {
+    const isOpen = answers[index].style.display === "block";
+    answers[index].style.display = isOpen ? "none" : "block";
+    if (isOpen) {
+      icon.classList.remove("ri-arrow-up-s-line");
+      icon.classList.add("ri-arrow-down-s-line");
+    } else {
+      icon.classList.remove("ri-arrow-down-s-line");
+      icon.classList.add("ri-arrow-up-s-line");
+    }
+    problems.forEach((otherProblem, otherIndex) => {
+      if (otherIndex !== index) {
+        answers[otherIndex].style.display = "none";
+        const otherIcon = otherProblem.querySelector("i");
+        otherIcon.classList.remove("ri-arrow-up-s-line");
+        otherIcon.classList.add("ri-arrow-down-s-line");
+      }
+    });
+  });
+});
+// =========================================== Faq js================================

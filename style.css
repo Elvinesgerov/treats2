@@ -1752,7 +1752,7 @@ a {
 }
 
 .problems {
-    padding: 15px;
+    padding: 30px;
     border-radius: 15px;
     background-color: #313B90;
     color: white;
@@ -1763,6 +1763,10 @@ a {
     margin: 30px auto;
     align-items: center;
     transition: 0.5s;
+}
+
+.problems i {
+    font-size: 22px;
 }
 
 .questiontext {
@@ -1778,20 +1782,17 @@ a {
 }
 
 .answer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    border-radius: 8px;
     background-color: #00ddeb;
+    color: white;
     width: 90%;
-    height: 150px;
-    font-size: 18px;
-    border-radius: 10px;
-    padding-left: 20px;
-    margin: 0 auto;
+    height: 60px;
+    margin: 30px auto;
+    transition: 0.5s;
     display: none;
+    font-size: 19px;
+    padding: 20px 20px;
 }
-
 /* ============================================ Main CSS ========================================== */
 
 
@@ -1806,7 +1807,7 @@ footer {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
-    margin: 70px 50px;
+    margin: 400px 50px;
 }
 
 .footer_a a {
@@ -1865,7 +1866,7 @@ footer {
 }
 
 .footer_sheet {
-    margin-top: -355px;
+    margin-top: -680px;
 }
 
 .sheet_footer p {
